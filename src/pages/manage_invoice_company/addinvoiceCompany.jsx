@@ -26,7 +26,7 @@ export function AddInvoiceCompany() {
   e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/Invoice_company/addInvoiceCompany`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Invoice_company/addInvoiceCompany`,
         {
           method: "POST",
           headers: {

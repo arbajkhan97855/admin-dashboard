@@ -30,11 +30,11 @@ export function MidAddTravelPolicy() {
     Invoice_Cycle: "",
   };
     const [formdata, handelChange, setformdata] = useApi(objects);
-  const [Alldata] = useFetch(`http://localhost:4000/api/admin/travelPolicy/getAllTravelPolicy`)
+  const [Alldata] = useFetch(`${import.meta.env.VITE_API_URL}/api/admin/travelPolicy/getAllTravelPolicy`)
  async function fetchdata(id) {
   try {
     const res = await fetch(
-      `http://localhost:4000/api/admin/travelPolicy/getTravelPolicy/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/admin/travelPolicy/getTravelPolicy/${id}`,
       {
         method: "GET",
         credentials: "include",
@@ -62,8 +62,8 @@ useEffect(() => {
   e.preventDefault();
 
   const url = policyId
-    ? `${import.meta.env.VITE_API_URL}/travelPolicy/editTravelPolicy/${policyId}`
-    : `${import.meta.env.VITE_API_URL}/travelPolicy/addTravelPolicy`;
+    ? `${import.meta.env.VITE_API_URL}/api/admin/travelPolicy/editTravelPolicy/${policyId}`
+    : `${import.meta.env.VITE_API_URL}/api/admin/travelPolicy/addTravelPolicy`;
 
   const method = policyId ? "PUT" : "POST";
 

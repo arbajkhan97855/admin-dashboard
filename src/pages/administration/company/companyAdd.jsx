@@ -27,7 +27,7 @@ export function CompanyAdd() {
   const handelSubmit = async (e) => {
     e.preventDefault();
     try {
-        const apiurl = await fetch(`${import.meta.env.VITE_API_URL}/company/addCompany`, {
+        const apiurl = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/company/addCompany`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

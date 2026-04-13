@@ -15,7 +15,7 @@ export function DepartmentUpdate() {
   async function fetchdata() {
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/department/getDepartment/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/department/getDepartment/${id}`,
         {
           method: "GET",
           headers: {
@@ -50,7 +50,7 @@ export function DepartmentUpdate() {
     e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/department/editDepartment/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/department/editDepartment/${id}`,
         {
           method: "PUT",
           headers: {

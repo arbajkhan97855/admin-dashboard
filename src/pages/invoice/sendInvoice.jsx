@@ -17,13 +17,13 @@ export function SendInvoice() {
   });
 
   const [invoice] = useFetch(
-    `${import.meta.env.VITE_API_URL}/invoice/getInvoice/${id}`
+    `${import.meta.env.VITE_API_URL}/api/admin/invoice/getInvoice/${id}`
   );
 
   useEffect(() => {
     if (!invoice?.invoice?.Pdf_File) return;
 
-    fetch(`http://localhost:4000/upload/pdf/${invoice.invoice.Pdf_File}`)
+    fetch(`${import.meta.env.VITE_API_URL}/upload/pdf/${invoice.invoice.Pdf_File}`)
       .then((res) => res.blob())
       .then((blob) => {
         setAttachment(
@@ -35,7 +35,7 @@ export function SendInvoice() {
       .catch((err) => console.error("Failed to fetch PDF:", err));
   }, [invoice]);
 
-  const [SMTPdata] = useFetch(`${import.meta.env.VITE_API_URL}/SMTP/getsmtp`);
+  const [SMTPdata] = useFetch(`${import.meta.env.VITE_API_URL}/api/admin/SMTP/getsmtp`);
 
   const handelChange = (e) => {
     const { name, value } = e.target;
@@ -86,7 +86,7 @@ export function SendInvoice() {
     formData.append("attachment", attachment); // 👈 FILE
 
     const sendInvoicePromise = fetch(
-      `${import.meta.env.VITE_API_URL}/invoice/sendInvoice/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/admin/invoice/sendInvoice/${id}`,
       {
         method: "POST",
         credentials: "include",

@@ -42,7 +42,7 @@ export function AddInvoice2() {
 
   //  Invoice company data Auto fill
   const [InvoiceCompany,  , setInvoiceCompany] = useFetch(
-    `${import.meta.env.VITE_API_URL}/Invoice_company/getInvoiceCompany`
+    `${import.meta.env.VITE_API_URL}/api/admin/Invoice_company/getInvoiceCompany`
   );
   const handleCompanyNameChange = (e) => {
     const selectedCompanyName = e.target.value;
@@ -117,7 +117,7 @@ export function AddInvoice2() {
 
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/invoice/addInvoice`,
+        `${import.meta.env.VITE_API_URL}/api/admin/invoice/addInvoice`,
         {
           method: "POST",
           credentials: "include",

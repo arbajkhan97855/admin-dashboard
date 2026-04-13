@@ -8,10 +8,10 @@ import { usePagination } from "../../../customhook/usePagination";
 export function CompanyTable() {
   const [deleteId, setDeleteId] = useState(null);
   const [compantdata, fcompany, setcompantdata] = useFetch(
-    `${import.meta.env.VITE_API_URL}/company/getAllCompany`
+    `${import.meta.env.VITE_API_URL}/api/admin/company/getAllCompany`
   );
   const [success, errormsg, DeleteCompany] = useDelete(
-    `${import.meta.env.VITE_API_URL}/company/deleteCompany`
+    `${import.meta.env.VITE_API_URL}/api/admin/company/deleteCompany`
   );
   const [
     values,

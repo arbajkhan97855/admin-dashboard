@@ -32,7 +32,7 @@ export function UpdateBlog() {
   async function fetchdata() {
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/blog/getBlog/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/blog/getBlog/${id}`,
         {
           method: "GET",
           credentials: "include",
@@ -77,7 +77,7 @@ export function UpdateBlog() {
       });
 
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/blog/editBlog/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/blog/editBlog/${id}`,
         {
           method: "PUT",
           credentials: "include",

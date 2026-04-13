@@ -21,7 +21,7 @@ export function UpdateTicket() {
   async function fetchdata() {
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/Ticket/getTicket/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Ticket/getTicket/${id}`,
         {
           method: "GET",
           credentials: "include",
@@ -75,7 +75,7 @@ export function UpdateTicket() {
       });
 
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/Ticket/editTicket/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Ticket/editTicket/${id}`,
         {
           method: "PUT",
           credentials: "include",
@@ -169,7 +169,7 @@ export function UpdateTicket() {
                       <input type="file" name="Image" onChange={handleChange} />
                       {formdata.Image && (
                     <img
-                      src={`http://localhost:4000/upload/${formdata.Image}`}
+                      src={`${import.meta.env.VITE_API_URL}/upload/${formdata.Image}`}
                       alt="Ticket"
                       height="40px"
                       width="60px"

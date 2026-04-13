@@ -3,7 +3,7 @@ import { useFetch } from "../../../customhook/useFetch";
 
 export function MidViewTravelPolicy() {
   const [data] = useFetch(
-    `http://localhost:4000/api/admin/travelPolicy/getAllTravelPolicy`
+    `${import.meta.env.VITE_API_URL}/api/admin/travelPolicy/getAllTravelPolicy`
   );
 
   return (

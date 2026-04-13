@@ -10,10 +10,10 @@ import { Footer } from "../../component/footer";
 export function InvoicePage() {
   const [deleteId, setDeleteId] = useState(null);
   const [invoice, finvoice, setinvoice] = useFetch(
-    `${import.meta.env.VITE_API_URL}/invoice/getAllInvoice`
+    `${import.meta.env.VITE_API_URL}/api/admin/invoice/getAllInvoice`
   );
   const [success, errormsg, DeleteInvoice] = useDelete(
-    `${import.meta.env.VITE_API_URL}/invoice/deleteInvoice`
+    `${import.meta.env.VITE_API_URL}/api/admin/invoice/deleteInvoice`
   );
   const [
     values,
@@ -48,7 +48,7 @@ export function InvoicePage() {
   const handleSendInvoiceClick = async (id) => {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/invoice/generate-pdf/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/invoice/generate-pdf/${id}`,
         {
           method: "POST",
           credentials: "include",

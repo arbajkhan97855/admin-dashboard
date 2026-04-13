@@ -18,10 +18,10 @@ export function SendInvoice2() {
   });
 
   const [invoice] = useFetch(
-    `${import.meta.env.VITE_API_URL}/invoice/getInvoice/${id}`
+    `${import.meta.env.VITE_API_URL}/api/admin/invoice/getInvoice/${id}`
   );
 
-  const [SMTPdata] = useFetch(`${import.meta.env.VITE_API_URL}/SMTP/getsmtp`);
+  const [SMTPdata] = useFetch(`${import.meta.env.VITE_API_URL}/api/admin/SMTP/getsmtp`);
 
   const handelChange = (e) => {
     const { name, value } = e.target;
@@ -45,7 +45,7 @@ export function SendInvoice2() {
     formData.append("attachment", attachment); //  FILE
   
     const sendInvoice = fetch(
-      `${import.meta.env.VITE_API_URL}/invoice/sendInvoice/${id}`,
+      `${import.meta.env.VITE_API_URL}/api/admin/invoice/sendInvoice/${id}`,
       {
         method: "POST",
         credentials: "include",

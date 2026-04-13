@@ -28,7 +28,7 @@ export function AddSMTP() {
   e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/SMTP/addsmtp`,
+        `${import.meta.env.VITE_API_URL}/api/admin/SMTP/addsmtp`,
         {
           method: "POST",
           headers: {

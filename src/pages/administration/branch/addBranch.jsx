@@ -18,7 +18,7 @@ export function Addbranch() {
   };
 
   const [company, fcompany] = useFetch(
-    `${import.meta.env.VITE_API_URL}/company/getAllCompany`
+    `${import.meta.env.VITE_API_URL}/api/admin/company/getAllCompany`
   );
 
   const [data, handleChange, setdata] = useApi(object);
@@ -27,7 +27,7 @@ export function Addbranch() {
     e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/branch/addBranch`,
+        `${import.meta.env.VITE_API_URL}/api/admin/branch/addBranch`,
         {
           method: "POST",
           headers: {

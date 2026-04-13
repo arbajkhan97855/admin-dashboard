@@ -8,10 +8,10 @@ import { usePagination } from "../../../customhook/usePagination";
 export function BranchMid() {
   const [deleteId, setDeleteId] = useState(null);
   const [branchdata, fbranch, setbranchdata] = useFetch(
-    `${import.meta.env.VITE_API_URL}/branch/getAllBranch`
+    `${import.meta.env.VITE_API_URL}/api/admin/branch/getAllBranch`
   );
   const [success, errormsg, DeleteBranch] = useDelete(
-    `${import.meta.env.VITE_API_URL}/branch/deleteBranch`
+    `${import.meta.env.VITE_API_URL}/api/admin/branch/deleteBranch`
   );
 
   const [values, lastPageOfItem, firstPageOfItem, currentPage, 

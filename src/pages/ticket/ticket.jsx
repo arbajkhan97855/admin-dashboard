@@ -10,7 +10,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 export function Tickets() {
   const [allTickets, tfunc] = useFetch(
-    `${import.meta.env.VITE_API_URL}/Ticket/getTickets`
+    `${import.meta.env.VITE_API_URL}/api/admin/Ticket/getTickets`
   );
   const [tickets, settickets] = useState([]);
 
@@ -64,7 +64,7 @@ export function Tickets() {
 
   // delete
   const [success, errormsg, DeleteTicket] = useDelete(
-    `${import.meta.env.VITE_API_URL}/Ticket/deleteTicket`
+    `${import.meta.env.VITE_API_URL}/api/admin/Ticket/deleteTicket`
   );
 
   useEffect(() => {

@@ -39,7 +39,7 @@ export function UpdateInvoice() {
   const fetchInvoice = async () => {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/invoice/getInvoice/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/invoice/getInvoice/${id}`,
         {
           headers: { "Content-Type": "application/json" },
           credentials: "include",
@@ -58,7 +58,7 @@ export function UpdateInvoice() {
       });
 
       if (json.invoice.Logo) {
-        setLogoPreview(`http://localhost:4000/upload/${json.invoice.Logo}`);
+        setLogoPreview(`${import.meta.env.VITE_API_URL}/upload/${json.invoice.Logo}`);
       }
 
       setItems(
@@ -79,7 +79,7 @@ export function UpdateInvoice() {
   }, []);
 
   // InvoiceCompany data Auto fill
-  const [InvoiceCompany] = useFetch(`${import.meta.env.VITE_API_URL}/Invoice_company/getInvoiceCompany`);
+  const [InvoiceCompany] = useFetch(`${import.meta.env.VITE_API_URL}/api/admin/Invoice_company/getInvoiceCompany`);
   
   const handleCompanyNameChange = (e) => {
     const selectedCompanyName = e.target.value;
@@ -168,7 +168,7 @@ export function UpdateInvoice() {
 
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/invoice/editInvoice/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/invoice/editInvoice/${id}`,
         {
           method: "PUT",
           credentials: "include",

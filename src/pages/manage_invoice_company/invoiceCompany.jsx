@@ -10,10 +10,10 @@ import { usePagination } from '../../customhook/usePagination'
 export function InvoiceCompany() {
   const [deleteId, setDeleteId] = useState(null);
   const [invoiceCompany, fsmtp, setinvoiceCompany] = useFetch(
-    `${import.meta.env.VITE_API_URL}/Invoice_company/getInvoiceCompany`
+    `${import.meta.env.VITE_API_URL}/api/admin/Invoice_company/getInvoiceCompany`
   );
   const [success, errormsg, DeleteinvoiceCompany] = useDelete(
-    `${import.meta.env.VITE_API_URL}/Invoice_company/deleteInvoiceCompany`
+    `${import.meta.env.VITE_API_URL}/api/admin/Invoice_company/deleteInvoiceCompany`
   );
   const [
     values,

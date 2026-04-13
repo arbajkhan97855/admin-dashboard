@@ -19,12 +19,12 @@ export function BranchUpdate() {
     Status: "",
   });
   const [company, fcompany] = useFetch(
-    `${import.meta.env.VITE_API_URL}/company/getAllCompany`
+    `${import.meta.env.VITE_API_URL}/api/admin/company/getAllCompany`
   );
   async function fetchdata() {
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/branch/getBranch/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/branch/getBranch/${id}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export function BranchUpdate() {
     e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/branch/editBranch/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/branch/editBranch/${id}`,
         {
           method: "PUT",
           headers: {

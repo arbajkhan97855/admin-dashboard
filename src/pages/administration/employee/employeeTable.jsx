@@ -8,10 +8,10 @@ import { usePagination } from "../../../customhook/usePagination";
 export function EmployeeTable() {
   const [deleteId, setDeleteId] = useState(null);
   const [employedata, femployee, setemployedata] = useFetch(
-    `${import.meta.env.VITE_API_URL}/employee/getAllEmployee`
+    `${import.meta.env.VITE_API_URL}/api/admin/employee/getAllEmployee`
   );
   const [success, errormsg, DeleteEmployee] = useDelete(
-    `${import.meta.env.VITE_API_URL}/employee/deleteEmployee`
+    `${import.meta.env.VITE_API_URL}/api/admin/employee/deleteEmployee`
   );
   const [
     values,

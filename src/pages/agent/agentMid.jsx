@@ -9,10 +9,10 @@ import { usePagination } from "../../customhook/usePagination";
 export function AgentMid() {
   const [deleteId, setDeleteId] = useState(null);
   const [agentdata, fbranch, setagentdata] = useFetch(
-    `http://localhost:4000/api/admin/Agency/getAllAgency`
+    `${import.meta.env.VITE_API_URL}/api/admin/Agency/getAllAgency`
   );
   const [success, errormsg, DeleteAgent] = useDelete(
-    `http://localhost:4000/api/admin/Agency/deleteAgency`
+    `${import.meta.env.VITE_API_URL}/api/admin/Agency/deleteAgency`
   );
   const [values, lastPageOfItem, firstPageOfItem, currentPage, totalPage,
           handlePrevPage, handleNextPage] = usePagination(agentdata, 5)

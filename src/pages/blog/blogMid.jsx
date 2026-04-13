@@ -9,11 +9,11 @@ export function BlogMid() {
   const [deleteId, setDeleteId] = useState(null);
 
   const [blogdata, fetchblog, setblogdata] = useFetch(
-    `${import.meta.env.VITE_API_URL}/blog/getAllBlog`
+    `${import.meta.env.VITE_API_URL}/api/admin/blog/getAllBlog`
   );
 
   const [success, errormsg, DeleteBlog] = useDelete(
-    `${import.meta.env.VITE_API_URL}/blog/deleteBlog`
+    `${import.meta.env.VITE_API_URL}/api/admin/blog/deleteBlog`
   );
   const [
     values,

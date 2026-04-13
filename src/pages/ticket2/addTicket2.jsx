@@ -43,7 +43,7 @@ export function AddTicket2() {
       });
 
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/Ticket/addTicket`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Ticket/addTicket`,
         {
           method: "POST",
           credentials: "include",

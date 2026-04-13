@@ -20,7 +20,7 @@ export function UpdateInvoiceCompany() {
   const fetchSMTP = async () => {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/Invoice_company/getInvoiceCompany/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Invoice_company/getInvoiceCompany/${id}`,
         {
           headers: { "Content-Type": "application/json" },
           credentials: "include",
@@ -51,7 +51,7 @@ export function UpdateInvoiceCompany() {
   e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/Invoice_company/editInvoiceCompany/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Invoice_company/editInvoiceCompany/${id}`,
         {
           method: "PUT",
           headers: {

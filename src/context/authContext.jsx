@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const checkAuth = async () => {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/login/check_auth`,
+        `${import.meta.env.VITE_API_URL}/api/admin/login/check_auth`,
         {
           method: "GET",
           credentials: "include", 

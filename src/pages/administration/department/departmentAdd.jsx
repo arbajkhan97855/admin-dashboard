@@ -16,7 +16,7 @@ export function DepartmentAdd() {
     e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/department/addDepartment`,
+        `${import.meta.env.VITE_API_URL}/api/admin/department/addDepartment`,
         {
           method: "POST",
           headers: {

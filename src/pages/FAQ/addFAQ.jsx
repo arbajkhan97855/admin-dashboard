@@ -18,7 +18,7 @@ export function AddFAQ() {
     e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/FAQ/addFAQ`,
+        `${import.meta.env.VITE_API_URL}/api/admin/FAQ/addFAQ`,
         {
           method: "POST",
           headers: {

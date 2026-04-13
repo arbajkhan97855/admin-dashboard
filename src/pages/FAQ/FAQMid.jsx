@@ -9,11 +9,11 @@ export function FAQMid() {
   const [deleteId, setDeleteId] = useState(null);
 
   const [Faqdata, fetchfaq, setFaqdata] = useFetch(
-    `${import.meta.env.VITE_API_URL}/FAQ/getAllFAQ`
+    `${import.meta.env.VITE_API_URL}/api/admin/FAQ/getAllFAQ`
   );
 
   const [success, errormsg, Deletefaq] = useDelete(
-    `${import.meta.env.VITE_API_URL}/FAQ/deleteFAQ`
+    `${import.meta.env.VITE_API_URL}/api/admin/FAQ/deleteFAQ`
   );
 
   const [

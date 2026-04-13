@@ -21,7 +21,7 @@ const {id} = useParams()
   const fetchSMTP = async () => {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/SMTP/getsmtp/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/SMTP/getsmtp/${id}`,
         {
           headers: { "Content-Type": "application/json" },
           credentials: "include",
@@ -52,7 +52,7 @@ const {id} = useParams()
   e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/SMTP/editsmtp/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/SMTP/editsmtp/${id}`,
         {
           method: "PUT",
           headers: {

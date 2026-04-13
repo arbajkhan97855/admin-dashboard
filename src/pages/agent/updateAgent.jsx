@@ -38,7 +38,7 @@ export function UpdateAgent() {
   async function fetchdata() {
     try {
       const apiurl = await fetch(
-        `http://localhost:4000/api/admin/Agency/getAgency/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Agency/getAgency/${id}`,
         {
           method: "GET",
           credentials: "include",
@@ -90,7 +90,7 @@ export function UpdateAgent() {
       });
 
       const apiurl = await fetch(
-        `http://localhost:4000/api/admin/Agency/editAgency/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Agency/editAgency/${id}`,
         {
           method: "PUT",
           credentials: "include",

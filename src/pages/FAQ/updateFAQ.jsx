@@ -17,7 +17,7 @@ export function UpdateFAQ() {
   async function fetchdata() {
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/FAQ/getFAQ/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/FAQ/getFAQ/${id}`,
         {
           method: "GET",
           credentials: "include",
@@ -50,7 +50,7 @@ export function UpdateFAQ() {
     e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/FAQ/editFAQ/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/FAQ/editFAQ/${id}`,
         {
           method: "PUT",
           headers: {

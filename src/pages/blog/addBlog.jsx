@@ -45,7 +45,7 @@ export function AddBlog() {
       });
 
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/blog/addBlog`,
+        `${import.meta.env.VITE_API_URL}/api/admin/blog/addBlog`,
         {
           method: "POST",
           credentials: "include",

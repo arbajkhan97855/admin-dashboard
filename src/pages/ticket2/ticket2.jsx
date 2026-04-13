@@ -10,7 +10,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 export function Tickets2() {
   const [allTickets, tfunc] = useFetch(
-    `${import.meta.env.VITE_API_URL}/Ticket/getTickets`
+    `${import.meta.env.VITE_API_URL}/api/admin/Ticket/getTickets`
   );
   const [tickets, settickets] = useState([]);
   const [activeClass, setactiveClass] = useState("All");

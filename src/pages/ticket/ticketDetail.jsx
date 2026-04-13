@@ -26,7 +26,7 @@ export function TicketDetail() {
       formData.append("Root_Password", rootPassword);
 
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/Ticket/editTicket/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Ticket/editTicket/${id}`,
         {
           method: "PUT",
           credentials: "include",
@@ -49,7 +49,7 @@ export function TicketDetail() {
   async function fetchTicketWithChats() {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/Ticket/getTicketChat/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Ticket/getTicketChat/${id}`,
         {
           method: "GET",
           credentials: "include",
@@ -98,7 +98,7 @@ export function TicketDetail() {
       }
 
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/Ticket/addChat`,
+        `${import.meta.env.VITE_API_URL}/api/admin/Ticket/addChat`,
         {
           method: "POST",
           credentials: "include",
@@ -133,7 +133,7 @@ export function TicketDetail() {
 
   // delete chat
   const [success, errormsg, DeleteChat] = useDelete(
-    `${import.meta.env.VITE_API_URL}/Ticket/deleteChat`
+    `${import.meta.env.VITE_API_URL}/api/admin/Ticket/deleteChat`
   );
 
   useEffect(() => {
@@ -251,7 +251,7 @@ export function TicketDetail() {
                     <br />
                     {item.description}
                     <br />
-                    {item.image && <img src={`http://localhost:4000/upload/${item.image}`} />}
+                    {item.image && <img src={`${import.meta.env.VITE_API_URL}/upload/${item.image}`} />}
                     <br />
                     Regards,
                     <br />

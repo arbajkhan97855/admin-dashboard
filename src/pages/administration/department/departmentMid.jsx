@@ -8,11 +8,11 @@ import { usePagination } from "../../../customhook/usePagination";
 export function DepartmentTable() {
   const [deleteId, setDeleteId] = useState(null);
   const [department, fetchdata, setdepartment] = useFetch(
-    `${import.meta.env.VITE_API_URL}/department/getAllDepartment`
+    `${import.meta.env.VITE_API_URL}/api/admin/department/getAllDepartment`
   );
 
   const [success, errormsg, DeleteDepartment] = useDelete(
-    `${import.meta.env.VITE_API_URL}/department/deleteDepartment`
+    `${import.meta.env.VITE_API_URL}/api/admin/department/deleteDepartment`
   );
   const [
     values,

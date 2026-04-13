@@ -10,10 +10,10 @@ import { Footer } from "../../component/footer";
 export function InvoicePage2() {
   const [deleteId, setDeleteId] = useState(null);
   const [invoice, finvoice, setinvoice] = useFetch(
-    `${import.meta.env.VITE_API_URL}/invoice/getAllInvoice`
+    `${import.meta.env.VITE_API_URL}/api/admin/invoice/getAllInvoice`
   );
   const [success, errormsg, DeleteInvoice] = useDelete(
-    `${import.meta.env.VITE_API_URL}/invoice/deleteInvoice`
+    `${import.meta.env.VITE_API_URL}/api/admin/invoice/deleteInvoice`
   );
   const [
     values,

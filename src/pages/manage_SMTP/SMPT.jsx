@@ -10,10 +10,10 @@ import { usePagination } from '../../customhook/usePagination'
 export function SMPT_Page() {
   const [deleteId, setDeleteId] = useState(null);
   const [smtpValue, fsmtp, setsmtpValue] = useFetch(
-    `${import.meta.env.VITE_API_URL}/SMTP/getsmtp`
+    `${import.meta.env.VITE_API_URL}/api/admin/SMTP/getsmtp`
   );
   const [success, errormsg, DeleteSMTP] = useDelete(
-    `${import.meta.env.VITE_API_URL}/SMTP/deletesmtp`
+    `${import.meta.env.VITE_API_URL}/api/admin/SMTP/deletesmtp`
   );
   const [
     values,

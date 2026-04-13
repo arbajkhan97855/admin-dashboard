@@ -14,7 +14,7 @@ export function ViewInvoice2() {
     const invoiceRef = useRef(); 
 
    async function ViewFetch(){
-    const apiurl = await fetch(`${import.meta.env.VITE_API_URL}/invoice/getInvoice/${id}`, {
+    const apiurl = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/invoice/getInvoice/${id}`, {
         method : "GET",
         credentials: "include",
     })
@@ -57,7 +57,7 @@ const downloadPDF = () => {
             <table>
               <tr>
                 <td>
-                  <img src={`http://localhost:4000/upload/${invoice.Logo}`} alt="Logo" className="invoice-logo" crossOrigin="anonymous" />
+                  <img src={`${import.meta.env.VITE_API_URL}/upload/${invoice.Logo}`} alt="Logo" className="invoice-logo" crossOrigin="anonymous" />
                 </td>
                 <td className="invoice-header-right">
                   <strong className="invoice-title">INVOICE</strong>

@@ -22,7 +22,7 @@ export function LoginPage() {
     if (Number(Capturevalue) === Number(Capturecheck)) {
       try {
         const apiurl = await fetch(
-          `${import.meta.env.VITE_API_URL}/login/loginAdmin`,
+          `${import.meta.env.VITE_API_URL}/api/admin/login/loginAdmin`,
           {
             method: "POST",
             headers: {

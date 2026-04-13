@@ -26,7 +26,7 @@ export function CompanyUpdate() {
   async function fetchdata() {
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/company/getCompany/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/company/getCompany/${id}`,
         {
           method: "GET",
           headers: {
@@ -62,7 +62,7 @@ export function CompanyUpdate() {
     e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/company/editCompany/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/admin/company/editCompany/${id}`,
         {
           method: "PUT",
           headers: {

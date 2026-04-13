@@ -23,14 +23,14 @@ export function EmployeeAdd() {
   const [filterbranch, setfilterbranch] = useState(null);
 
   const [company] = useFetch(
-    `${import.meta.env.VITE_API_URL}/company/getAllCompany`
+    `${import.meta.env.VITE_API_URL}/api/admin/company/getAllCompany`
   );
   const [branch] = useFetch(
-    `${import.meta.env.VITE_API_URL}/branch/getAllBranch`
+    `${import.meta.env.VITE_API_URL}/api/admin/branch/getAllBranch`
   );
 
   const [department] = useFetch(
-    `${import.meta.env.VITE_API_URL}/department/getAllDepartment`
+    `${import.meta.env.VITE_API_URL}/api/admin/department/getAllDepartment`
   );
 
   // advance
@@ -62,7 +62,7 @@ export function EmployeeAdd() {
      e.preventDefault();
     try {
       const apiurl = await fetch(
-        `${import.meta.env.VITE_API_URL}/employee/addEmployee`,
+        `${import.meta.env.VITE_API_URL}/api/admin/employee/addEmployee`,
         {
           method: "POST",
           headers: {
