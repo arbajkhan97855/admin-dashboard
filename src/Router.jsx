@@ -24,7 +24,7 @@ import { LoginPage } from "./pages/login/login";
 import { CreateTravelPolicy } from "./pages/travel_policy/create_travel_policy/addTravelPolicy";
 import { ViewTravelPolicy } from "./pages/travel_policy/view_travel_policy/viewTravelPolicy";
 import { Agent } from "./pages/agent/agent";
-import { AddAgent } from "./pages/agent/Addagent";
+import { AddAgent } from "./pages/agent/addagent";
 import { UpdateAgent } from "./pages/agent/updateAgent";
 
 import { Addservice } from "./Api/manage_api/service/addService";
