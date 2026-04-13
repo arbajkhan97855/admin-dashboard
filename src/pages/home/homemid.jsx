@@ -1,5 +1,4 @@
 import React from 'react'
-import credit_image from '../../assets/images/home/credit-1.svg'
 import { Link } from 'react-router-dom'
 
 export function Homemid() {
