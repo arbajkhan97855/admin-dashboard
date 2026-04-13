@@ -1,0 +1,171 @@
+/* Container & Background */
+.add-ticket-section {
+    background: #f8fafc; /* Light gray-blue background */
+    padding: 20px 0;
+    min-height: 80vh;
+  }
+  
+  /* Header & Breadcrumb */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+  }
+  
+  .subtitle {
+    color: #64748b;
+    margin-top: 5px;
+  }
+  
+  .modern-breadcrumb {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .modern-breadcrumb a {
+    text-decoration: none;
+    color: #64748b;
+    transition: 0.3s;
+  }
+  
+  .modern-breadcrumb a.active {
+    color: #3b82f6;
+    font-weight: 600;
+  }
+  
+  /* Form Card */
+  .form-container-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+  
+  .full-width {
+    grid-column: span 2;
+  }
+  
+  /* Input Styles */
+  .input-group label {
+    display: block;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-wrapper .icon {
+    position: absolute;
+    left: 15px;
+    color: #94a3b8;
+  }
+  
+  .input-wrapper input, 
+  .input-wrapper select {
+    width: 100%;
+    padding: 12px 12px 12px 45px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .input-wrapper input:focus, 
+  .input-wrapper select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Quill Editor Styling */
+  .quill-editor-container .ql-container {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 200px;
+  }
+  
+  .quill-editor-container .ql-toolbar {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #f1f5f9;
+  }
+  
+  /* Custom File Upload */
+  .file-input-wrapper{
+    display: flex;
+    gap: 5px;
+  }
+  .file-input-wrapper input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1.5px dashed #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+    cursor: pointer;
+  }
+  
+  /* Submit Button */
+  .form-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .submit-btn {
+    background: #2563eb;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  }
+  
+  .submit-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+    .full-width {
+      grid-column: span 1;
+    }
+    .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  }

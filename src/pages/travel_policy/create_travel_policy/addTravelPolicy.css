@@ -1,0 +1,115 @@
+.container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 12px;
+}
+
+
+.section {
+    margin-bottom: 28px;
+    background: #fff;
+    border-radius: 6px;
+}
+
+.section h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #5b2d86;
+  width: fit-content;
+  padding: 10px 14px;
+  border-radius: 4px 4px 0 0;
+}
+
+
+.inline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 18px 14px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+
+label {
+  font-size: 15px;
+  color: black;
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 600;
+}
+
+
+input,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #5b2d86;
+  box-shadow: 0 0 0 1px rgba(91, 45, 134, 0.2);
+}
+
+
+.section > label {
+  margin-top: 14px;
+}
+
+.section > select {
+  margin-top: 6px;
+  width: 300px;
+}
+
+
+.footers {    padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.btn {
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.primary {
+  background: #5b2d86;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #4a236e;
+}
+
+.btn.secondary {
+  background: #e5e5e5;
+  color: #333;
+}
+
+.btn.secondary:hover {
+  background: #d5d5d5;
+}
+
+
+.slipper-box{
+    padding: 12px;
+    width: 34%;
+}

@@ -1,0 +1,60 @@
+ .agent_container {
+            max-width: 900px;
+            background: #fff;
+            padding: 25px;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
+        }
+     .agent_form h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            color: #333;
+        }
+      .agent_form .row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+       .agent_form .col {
+            flex: 1;
+        }
+     .agent_form label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+     .agent_form input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+      .agent_form textarea {
+            resize: vertical;
+        }
+     .agent_form .checkbox-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 15px;
+        }
+     .agent_form .submit-btn {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+      .agent_form .submit-btn:hover {
+            background: #0056b3;
+        }
+      .agent_form  .note {
+            font-size: 13px;
+            color: #777;
+        }

@@ -1,0 +1,378 @@
+.tk-wrapper {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: 95vh;
+  font-family: "Inter", sans-serif;
+}
+
+.tk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.tk-header h2 {
+  font-size: 22px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tk-header p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.tk-icon {
+  color: #4f46e5;
+}
+
+.tk-btn-primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tk-btn-primary i {
+  margin-right: 6px;
+  color: #fff !important;
+}
+.tk-btn-primary Link {
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.tk-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+}
+
+.tk-sidebar {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border-top: 2px solid red;
+}
+.tk-btn-primary a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sub-subject {
+  color: #167ee6;
+}
+
+.pagi-btn {
+  display: flex;
+  gap: 5px;
+  padding: 0px 12px;
+}
+
+.tk-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.tk-search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.tk-filter {
+  margin-top: 18px;
+}
+
+.tk-filter label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tk-filter select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.tk-status span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tk-status .active {
+  background: #6366f1;
+  color: #fff;
+}
+
+.tk-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+  border-top: 2px solid red;
+}
+
+.tk-table-wrapper {
+  width: 100%;
+}
+
+.tk-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+/* HEADER */
+.tk-table thead th {
+  background: #fff;
+  border: 1px solid #aebfe0a4;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.tk-table tbody td {
+  border: 1px solid #aebfe0a4;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ROW HOVER */
+.tk-table tr:nth-child(odd) {
+  background: #f0f3f7;
+}
+.tk-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ================= TICKET TEXT ================= */
+.tk-id {
+  font-weight: 600;
+}
+
+.tk-subject {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.pagi-btn {
+  display: flex;
+  gap: 5px;
+  padding: 0px 12px;
+}
+/* ================= STATUS BADGE ================= */
+.tk-table .tk-status {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tk-status.onhold {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.tk-status.open {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.tk-status.closed {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .tk-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tk-table-wrapper {
+    overflow-x: scroll; /* horizontal scroll for small screens */
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .tk-layout {
+    grid-template-columns: 1fr; /* Sidebar goes on top */
+    gap: 16px;
+  }
+
+  .tk-sidebar {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .tk-content {
+    width: 100%;
+    padding: 16px;
+    overflow-x: scroll;
+  }
+
+  .tk-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tk-btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tk-search-box input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tk-header h2 {
+    font-size: 20px;
+  }
+
+  .tk-header p {
+    font-size: 12px;
+  }
+
+  .tk-filter select {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .tk-status span {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .tk-table thead th,
+  .tk-table tbody td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .tk-id {
+    font-size: 14px;
+  }
+
+  .tk-subject {
+    font-size: 12px;
+  }
+
+  .tk-table-wrapper {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .tk-header h2 {
+    font-size: 18px;
+  }
+
+  .tk-btn-primary {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .tk-filter label {
+    font-size: 12px;
+  }
+
+  .tk-status span {
+    font-size: 12px;
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .tk-table thead th,
+  .tk-table tbody td {
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .tk-id {
+    font-size: 13px;
+  }
+
+  .tk-subject {
+    font-size: 11px;
+  }
+}
+
+/* pagination */
+.pagi-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.pagi-btn span {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.pagi-btn button {
+  min-width: 40px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pagi-btn button:hover:not(:disabled) {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.pagi-btn button:first-child {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.pagi-btn button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background: #f1f5f9;
+  color: #64748b;
+}
