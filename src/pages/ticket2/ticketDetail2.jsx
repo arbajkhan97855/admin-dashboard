@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./TicketDetail2.css";
+import "./ticketDetail2.css";
 import { Navbar } from "../../component/navbar";
 import { Footer } from "../../component/footer";
 import toast, { Toaster } from "react-hot-toast";
