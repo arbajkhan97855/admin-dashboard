@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar } from '../../component/navbar'
 import { Footer } from '../../component/footer'
-import { Homemid } from './Homemid'
+import { Homemid } from './homemid'
 
 
 
